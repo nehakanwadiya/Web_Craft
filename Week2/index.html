@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SplitNow! - Tip & Bill Calculator</title>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Bebas+Neue&display=swap" rel="stylesheet" />
+
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-wrapper">
+    <h1>SplitNow! 💸</h1>
+
+    <div class="input-row">
+      <label for="bill">Bill Amount</label>
+      <input type="number" id="bill" placeholder="Enter total bill..." />
+    </div>
+
+    <div class="input-row">
+      <label for="tip">Tip %</label>
+      <input type="number" id="tip" placeholder="Enter tip percentage..." />
+    </div>
+
+    <div class="input-row">
+      <label for="people">Number of People</label>
+      <input type="number" id="people" placeholder="Enter how many people..." />
+    </div>
+
+    <div class="input-row">
+      <label for="currency">Choose Currency</label>
+      <select id="currency">
+        <option value="₹">₹ INR</option>
+        <option value="$">$ USD</option>
+        <option value="€">€ EUR</option>
+        <option value="£">£ GBP</option>
+        <option value="¥">¥ JPY</option>
+      </select>
+    </div>
+
+    <button onclick="calculateSplit()">Calculate 🧮</button>
+    <button class="reset" onclick="resetForm()">Reset 🔁</button>
+
+    <div class="result-box" id="resultBox" style="display: none;">
+      <p>💰 Tip Amount: <span id="tipAmount">0.00</span></p>
+      <p>🧾 Total Bill (with Tip): <span id="totalWithTip">0.00</span></p>
+      <p>🙋 Each Person Pays: <span id="eachPays">0.00</span></p>
+    </div>
+  </div>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
